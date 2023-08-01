@@ -15,3 +15,4 @@
 
 # Ссылки:
 https://docs.python.org/3/library/functions.html - встроенные функции
+https://0.30000000000000004.com
