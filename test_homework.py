@@ -56,8 +56,7 @@ def test_random_list():
     l = []
 
     assert len(l) == 10
-    for i in range(len(l) - 1):
-        assert l[i] <= l[i + 1]
+    assert all(l[i] <= l[i + 1] for i in range(len(l) - 1))
 
 
 def test_unique_elements():
@@ -76,17 +75,14 @@ def test_dicts():
     """
     Создайте словарь из двух списков.
     Используйте первый список как ключи, а второй - как значения.
-    Присвойте переменной f значения словаря, используя встроенную функцию.
-    Подсказка: используй встроенную функцию zip.
+    Подсказка: используйте встроенную функцию zip.
     """
     first = ["a", "b", "c", "d", "e"]
     second = [1, 2, 3, 4, 5]
     # TODO создайте словарь
     d = {}
-    f = None
 
     assert isinstance(d, dict)
     assert len(d) == 5
-    for index, value in enumerate(f):
-        key = list(d.keys())[index]
-        assert d[key] == value
+    assert list(d.keys()) == first
+    assert list(d.values()) == second
